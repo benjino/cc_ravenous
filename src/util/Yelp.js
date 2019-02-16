@@ -7,7 +7,7 @@ https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort
       headers: {
         Authorization: `Bearer ${apiKey}`
       }
-    }).then(response => {
+    ).then(response => {
       return response.json();
     }).then(jsonResponse => {
       if (jsonResponse.businesses) {
@@ -28,6 +28,7 @@ https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort
         });
       }
     })
-};
+  }
+}
 
 export default yelp;
